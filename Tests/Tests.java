@@ -1,8 +1,6 @@
 import org.junit.Test;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import static org.junit.Assert.*;
 
 public class Tests {
@@ -17,9 +15,11 @@ public class Tests {
         list.add(5);
         list.add(6);
         list.add(7);
-        BinaryArray alpha = new BinaryArray(list);
+        BinarySearch alpha = new BinarySearch(list);
         assertEquals(alpha.search(3), 2);
         assertEquals(alpha.search(1), 0);
         assertEquals(alpha.search(6), 5);
+        assertEquals(alpha.search(7), 6);
     }
 }
+
