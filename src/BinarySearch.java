@@ -1,17 +1,16 @@
-import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryArray {
+public class BinarySearch {
 
     List<Integer> data;
 
-    public BinaryArray(List<Integer> list){
+    public BinarySearch(List<Integer> list){
         data = list;
     }
     public int search(int value){
         int length = ((data.size()) - 1);
-        int location = -1;
-        int location_checker = length/2;
+        int location = length;
+        int location_checker = length;
         int piece_start = 0;
         while (data.get(location_checker) != value){
             if(data.get(location_checker) > value){
@@ -26,7 +25,6 @@ public class BinaryArray {
             if(data.get(location_checker) == value){
                 location = location_checker;
             }
-            System.out.println(location_checker);
         }
         return location;
     }
